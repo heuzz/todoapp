@@ -1,8 +1,14 @@
 import { log } from './utils';
 import './app.css';
 
-const todos = [];
+const todos = [
+    {tilte: '먹기', isDone: false},
+    {tilte: '놀기', isDone: false}
+];
 
+const printTodos = () => {
+
+}
 const $form = document.querySelector('.new-task');
 const $input = document.querySelector('.new-task > input');
 
@@ -15,6 +21,8 @@ $form.addEventListener('submit',(event)=>{
     todos.push(todo);
     console.log(todos);
 
-    
+    $input.value = '';
+
+
 });
 
